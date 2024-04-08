@@ -1,0 +1,49 @@
+.ProseMirror a {
+	text-decoration: underline;
+	cursor: pointer;
+	color: theme(colors.primary.lightPurple);
+}
+
+.ProseMirror h1,
+h2,
+h3 * {
+	font-weight: bold;
+	margin-top: 0.2em;
+	margin-bottom: 0.2em;
+}
+.ProseMirror h1 *,
+.ProseMirror h1 {
+	font-size: 32px;
+}
+.ProseMirror h2 *,
+.ProseMirror h2 {
+	font-size: 24px;
+}
+.ProseMirror h3 *,
+.ProseMirror h3 {
+	font-size: 18px;
+}
+
+.ProseMirror ul {
+	padding: 0 1rem;
+	list-style: disc !important;
+}
+.ProseMirror ol {
+	padding: 0 1rem;
+	list-style: decimal;
+}
+.ProseMirror:focus {
+	outline: none;
+}
+
+.is-active > svg > path {
+	color: theme(colors.primary.lightPurple);
+}
+.is-active {
+	color: theme(colors.primary.lightPurple);
+}
+
+.ProseMirror iframe {
+	cursor: grab;
+	padding: 20px;
+}

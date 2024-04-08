@@ -1,0 +1,12 @@
+{
+	"extends": "next/core-web-vitals",
+	"parserOptions": {
+		"sourceType": "script"
+	},
+	"env": {
+		"es6": true
+	},
+	"rules": {
+		"keyword-spacing": 2
+	}
+}

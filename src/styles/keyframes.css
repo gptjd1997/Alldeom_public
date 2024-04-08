@@ -1,0 +1,53 @@
+@tailwind components;
+
+@layer components {
+	.hoveredBoxShadow {
+		transition-property: all;
+		transition-duration: 0.4s;
+	}
+	.hoveredBoxShadow:hover {
+		box-shadow: 0px 0px 20px -15px #a08be6 inset;
+		box-shadow: 0px 0px 7px 0px #352762;
+		z-index: 5;
+	}
+
+	.menuOpen {
+		animation: sideMenuOpen both 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+	}
+	.menuClose {
+		animation: sideMenuClose both 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+	}
+	.bgFadeIn:hover {
+		animation: bgFadeIn both 0.2s;
+	}
+}
+
+@keyframes boxShadowAnimation {
+	100% {
+		border: @apply 352762 0.3px solid;
+		box-shadow: 0px 0px 20px -15px #a08be6 inset;
+		box-shadow: 0px 0px 4px 0px #352762;
+		z-index: 5;
+	}
+}
+@keyframes bgFadeIn {
+	to {
+		@apply bg-primary-purple;
+	}
+}
+@keyframes sideMenuOpen {
+	0% {
+		@apply -left-72;
+	}
+	100% {
+		@apply left-24;
+	}
+}
+@keyframes sideMenuClose {
+	0% {
+		@apply left-24;
+	}
+	100% {
+		@apply -left-72;
+	}
+}

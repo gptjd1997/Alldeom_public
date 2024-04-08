@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+a {
+	cursor: default;
+}
+body {
+	height: 100%;
+	overflow: auto;
+}
+span {
+	font-size: 14px;
+}
+html,
+body,
+#fullheight {
+	min-height: 100% !important;
+	height: 100%;
+}
+
+input {
+	caret-color: whitesmoke;
+}
+
+.selected {
+	font-weight: bold;
+	color: #a08be6;
+}
+* {
+	color: #bcbcbc;
+	font-family: "Pretendard", "Noto Sans KR", "Apple SD Gothic", "맑은고딕",
+		"Nanum Gothic", sans-serif;
+}
+.react-colorful,
+.react-colorful__saturation {
+	width: 150px !important;
+	height: 150px !important;
+}
+.react-colorful__hue {
+	width: 150px;
+	height: 40px;
+}
+blockquote {
+	border-left: 3px solid #0d0d0d59;
+	padding-left: 1rem;
+}
+@layer components {
+	.boxWrapper {
+		background-color: #333333;
+		width: 100%;
+		min-height: 600px;
+		padding: 20px;
+		display: flex;
+	}
+	.boardHeader {
+		height: 0.75rem /* 12px */;
+		border-right-width: 1.5px;
+		align-items: center;
+		justify-content: center;
+		display: flex;
+		font-weight: 600;
+		border-color: rgb(133 133 133);
+	}
+	.postListWrapper {
+		grid-template-rows: 1.1fr repeat(10, 1fr);
+		grid-template-columns: repeat(1, minmax(0, 1fr));
+		display: grid;
+		border-radius: 0.375rem /* 6px */;
+	}
+	.postListHeader {
+		line-height: 35.97px;
+		grid-row: span 1 / span 1;
+		border-top: 4px solid #352762;
+		border-left: 1px solid #202020;
+		border-right: 1px solid #202020;
+		border-top-left-radius: 0.375rem /* 6px */;
+		border-top-right-radius: 0.375rem /* 6px */;
+		cursor: pointer;
+		display: flex;
+		justify-content: space-between;
+		z-index: 7;
+		height: 50px;
+	}
+	.postListHeader span {
+		align-self: center;
+		padding: 0 14px;
+		@apply font-bold;
+	}
+	.postListTitles {
+		color: #bcbcbc;
+		grid-row: span 1 / span 1;
+		padding: 2px 0.75em;
+		line-height: 32.71px;
+		font-size: 12px;
+		font-weight: 400;
+		box-sizing: border-box;
+		background-color: #2020207a;
+		margin-bottom: 1px;
+		border: 1px solid theme("colors.utilColors.border");
+		cursor: default;
+	}
+
+	.sideBarInnerMenu {
+		z-index: 8;
+		box-shadow: 25px 1px 20px -25px rgba(0, 0, 0, 0.4) inset;
+		-webkit-box-shadow: 25px 1px 20px -25px rgba(0, 0, 0, 0.4) inset;
+		-moz-box-shadow: 25px 1px 20px -25px rgba(0, 0, 0, 0.4) inset;
+	}
+}
